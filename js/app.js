@@ -12,10 +12,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const handleFormSubmit = function (evt) {
     evt.preventDefault();
     // console.log('bla');
-    const newReadingListItem = document.createElement('div');
-    newReadingListItem.textContent = `${this.title.value}, ${this.author.value}, ${this.category.value}`
+    const newReadingListItem = document.createElement('li');
+    newReadingListItem.classList.add('flex-item');
+
+
+    const titleItem = document.createElement('h1');
+    titleItem.textContent = this.title.value;
+    newReadingListItem.appendChild(titleItem);
+    const authorItem = document.createElement('h3');
+    authorItem.textContent = this.author.value;
+    newReadingListItem.appendChild(authorItem);
+    const categoryItem = document.createElement('p');
+    categoryItem.textContent = this.category.value
+    newReadingListItem.appendChild(categoryItem);
+
     const readingList = document.querySelector('#reading-list');
     readingList.appendChild(newReadingListItem);
+
     this.reset();
     // OR evt.target.reset();
   };

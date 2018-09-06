@@ -1,3 +1,37 @@
 body {
   font-family: Palatino;
+  background-color: lightblue;
+}
+
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+select {
+  margin-bottom: 15px;
+}
+
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+
+  display: flex;
+
+}
+
+.flex-item {
+  background: tomato;
+  padding: 10px;
+  width: auto;
+  height: 150px;
+  margin: 10px;
+
+  line-height: 15px;
+  color: white;
+
+  border: 2px solid black;
+  border-radius: 10%;
 }
